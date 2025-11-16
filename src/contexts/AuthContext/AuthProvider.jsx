@@ -9,14 +9,19 @@ import { auth } from "../../firebase/firebase.init";
 const AuthProvider = ({ children }) => {
   const { loading, setLoading } = React.useState(true);
 
+  // Create User
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  // Sign In User
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // Auth Info
   const authInfo = {
     loading,
     setLoading,
