@@ -1,7 +1,24 @@
+import { use } from "react";
 import { NavLink } from "react-router-dom";
 import ThemeToggle from "../Components/ThemeToggle";
+import { AuthContext } from "../contexts/AuthContext/AuthContext";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
+  const { signOutUser } = use(AuthContext);
+  
+  const handleLogout = () => {
+    // Implement logout functionality here
+    console.log("Logout clicked");
+    signOutUser()
+    .then(()=>{
+      console.log("User logged out");
+      alert("User logged out");
+    }).catch((error)=>{
+      console.error(error);
+    });
+
+  }
   const links = (
     <>
       <li>
@@ -51,9 +68,19 @@ const Navbar = () => {
       {/* Navbar End */}
       <div className="navbar-end flex items-center gap-3">
         <ThemeToggle />
-        <NavLink to={"/register"} className="btn btn-primary btn-sm">
-          Register
-        </NavLink>
+
+        {user?.uid ? (
+          <button onClick={handleLogout} className="btn btn-primary btn-sm">Logout</button>
+        ) : (
+          <>
+            <NavLink to={"/register"} className="btn btn-primary btn-sm">
+              Register
+            </NavLink>
+            <NavLink to={"/login"} className="btn btn-primary btn-sm">
+              Login
+            </NavLink>
+          </>
+        )}
       </div>
     </div>
   );

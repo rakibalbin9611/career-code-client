@@ -1,9 +1,9 @@
-import { FaEnvelope, FaLock } from "react-icons/fa";
 import Lottie from "lottie-react";
-import loginAnimation from "../../../assets/Login.json";
-import { NavLink } from "react-router-dom";
 import { use } from "react";
-import { AuthContext } from "../../../contexts/AuthContext/AuthContext";
+import { FaEnvelope, FaLock } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import loginAnimation from '../../assets/Login.json';
+import { AuthContext } from "../../contexts/AuthContext/AuthContext";
 
 export default function Login() {
   const { signInUser } = use(AuthContext);
