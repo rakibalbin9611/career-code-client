@@ -8,8 +8,7 @@ const Navbar = () => {
   const { signOutUser } = use(AuthContext);
   
   const handleLogout = () => {
-    // Implement logout functionality here
-    console.log("Logout clicked");
+    
     signOutUser()
     .then(()=>{
       console.log("User logged out");
