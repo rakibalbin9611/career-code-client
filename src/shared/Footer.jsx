@@ -1,102 +1,112 @@
-// Footer.jsx
-export default function Footer() {
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 mt-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Logo + About */}
+    <footer className="w-full bg-[#FFFDF7] dark:bg-[#1F1F1F] border-t border-gray-200 dark:border-gray-700 shadow-inner">
+      <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* ABOUT */}
         <div>
-          <h2 className="text-2xl font-bold text-white">JobFinder</h2>
-          <p className="mt-3 text-gray-400 text-sm">
-            Your trusted platform to find jobs, hire talent, and grow careers.
+          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+            CareerCode
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            Helping job seekers find their dream jobs. Join millions using our
+            platform every month.
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* QUICK LINKS */}
         <div>
-          <h3 className="text-white font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-white">
-                About Us
-              </a>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            Quick Links
+          </h3>
+          <ul className="text-gray-600 dark:text-gray-400 space-y-2">
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Home
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Jobs
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Jobs
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Companies
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Companies
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              About
+            </li>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Contact
             </li>
           </ul>
         </div>
 
-        {/* Job Seeker */}
+        {/* RESOURCES */}
         <div>
-          <h3 className="text-white font-semibold mb-3">Job Seekers</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-white">
-                Browse Jobs
-              </a>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            Resources
+          </h3>
+          <ul className="text-gray-600 dark:text-gray-400 space-y-2">
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Blog
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Create Resume
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Support
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Career Tips
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Privacy Policy
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Job Alerts
-              </a>
+            <li className="hover:text-[#2D6CF4] cursor-pointer transition">
+              Terms & Conditions
             </li>
           </ul>
         </div>
 
-        {/* Employers */}
+        {/* SOCIAL */}
         <div>
-          <h3 className="text-white font-semibold mb-3">Employers</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-white">
-                Post a Job
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Search Resume
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Employer Login
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Pricing
-              </a>
-            </li>
-          </ul>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            Follow Us
+          </h3>
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-[#2D6CF4] transition"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-[#2D6CF4] transition"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-[#2D6CF4] transition"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-[#2D6CF4] transition"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Bottom section */}
-      <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} JobFinder. All rights reserved.
+      {/* COPYRIGHT */}
+      <div className="w-full border-t border-gray-200 dark:border-gray-700 mt-8 py-4">
+        <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
+          &copy; {new Date().getFullYear()} CareerCode. All rights reserved.
+        </p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
