@@ -49,12 +49,14 @@ const Navbar = () => {
           >
             Log in
           </NavLink>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="px-5 py-2 rounded-lg bg-[#2D6CF4] hover:bg-[#1F54C2] text-white font-semibold transition"
-          >
-            Sign up
-          </motion.button>
+          <NavLink to={"/register"}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="px-5 py-2 rounded-lg bg-[#2D6CF4] hover:bg-[#1F54C2] text-white font-semibold transition"
+            >
+              Sign up
+            </motion.button>
+          </NavLink>
         </div>
       </div>
     </div>
